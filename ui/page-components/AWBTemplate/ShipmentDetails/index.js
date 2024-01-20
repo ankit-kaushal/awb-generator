@@ -1,5 +1,5 @@
-import cl from '@/ui/commons/Components/utils/classname-processor';
 import React from 'react';
+import cl from '@/ui/commons/Components/utils/classname-processor';
 
 import styles from './styles.module.css';
 
@@ -31,8 +31,11 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<p style={{ fontSize: 10, color: tempColor }}>Issuing Carrier&apos;s Agent Name and City</p>
-						<div className={cl`
+						<p style={{ fontSize: 10, color: tempColor }}>
+							Issuing Carrier&apos;s Agent Name and City
+						</p>
+						<div
+							className={cl`
 						${styles.flex} 
 						${styles.flex_font_bold} 
 						${styles.input_issuing_agent} 
@@ -77,7 +80,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								</div>
 							</p>
 						</div>
-						<div className={cl`
+						<div
+							className={cl`
 						${styles.flex} 
 						${styles.flex_padding_left}
 						${styles.flex_in_flex}
@@ -95,13 +99,16 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					`}
 					style={{ '--temp-color': tempColor }}
 				>
-					<div className={cl`
+					<div
+						className={cl`
 						${styles.flex} 
 						${styles.flex_padding_left}
 						${styles.flex_in_flex}
 					`}
 					>
-						<p style={{ fontSize: 10, color: tempColor }}>Accounting Information</p>
+						<p style={{ fontSize: 10, color: tempColor }}>
+							Accounting Information
+						</p>
 					</div>
 					<div
 						className={cl`
@@ -113,9 +120,9 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						${styles.font_style}
 					`}
 						style={{
-							fontSize      : 14.5,
-							textTransform : 'uppercase',
-							whiteSpace    : 'pre-wrap',
+							fontSize: 14.5,
+							textTransform: 'uppercase',
+							whiteSpace: 'pre-wrap',
 						}}
 					>
 						{formData.accountingInformation}
@@ -142,9 +149,9 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							<span style={{ color: tempColor }}>
 								Airport of Departure (Addr. of First Carrier) and Requested
 								Routing
-
 							</span>
-							<div className={cl`
+							<div
+								className={cl`
 						${styles.flex}
 						${styles.flex_font_bold}
 					`}
@@ -154,7 +161,6 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									style={{ fontSize: 14, textTransform: 'uppercase' }}
 								>
 									{formData?.origin}
-
 								</p>
 							</div>
 						</p>
@@ -176,22 +182,27 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<div className={cl`
+						<div
+							className={cl`
 								${styles.flex_row}
 								${styles.referrence_optional_flight_date_top}
 							`}
 						>
-							<div className={cl`
+							<div
+								className={cl`
 									${styles.flex}
 									${styles.flex_in_flex}
 								`}
 							>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex}
 					${styles.flex_padding_left}
 				`}
 								>
-									<p style={{ fontSize: 9, color: tempColor }}>Reference Number</p>
+									<p style={{ fontSize: 9, color: tempColor }}>
+										Reference Number
+									</p>
 								</div>
 							</div>
 							<div
@@ -202,14 +213,18 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								`}
 								style={{ '--temp-color': tempColor }}
 							>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex}
 					${styles.optional_shipping_text}
 				`}
 								/>
-								<p style={{ fontSize: 8, color: tempColor }}>Optional Shipping Information</p>
+								<p style={{ fontSize: 8, color: tempColor }}>
+									Optional Shipping Information
+								</p>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 					${styles.flex}
 					${styles.flex_in_flex}
 				`}
@@ -217,7 +232,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								<p style={{ fontSize: 9 }} />
 							</div>
 						</div>
-						<div className={cl`
+						<div
+							className={cl`
 					${styles.flex_row}
 					${styles.referrence_optional_bottom}
 				`}
@@ -242,7 +258,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 9 }} />
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 					${styles.flex}
 					${styles.flex_in_flex_c}
 				`}
@@ -291,7 +308,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 8 }}>
 									<span style={{ color: tempColor }}>To</span>
-									<div className={cl`
+									<div
+										className={cl`
 						${styles.flex} 
 						${styles.flex_font_bold}
 					`}
@@ -302,25 +320,28 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									</div>
 								</p>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 						${styles.flex_row} 
 						${styles.first_carrier}
 					`}
 							>
-								<div className={cl`
+								<div
+									className={cl`
 						${styles.flex} 
 						${styles.by_first_carrier}
 					`}
 								>
-									<div className={cl`
+									<div
+										className={cl`
 						${styles.flex} 
 						${styles.flex_padding_left}
 					`}
 									>
 										<p style={{ fontSize: 9 }}>
-											<span style={{ color: tempColor }}>By First Carrier</span>
-											{' '}
-											<div className={cl`
+											<span style={{ color: tempColor }}>By First Carrier</span>{' '}
+											<div
+												className={cl`
 													${styles.flex} 
 													${styles.flex_font_bold}
 												`}
@@ -332,7 +353,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										</p>
 									</div>
 								</div>
-								<div className={cl`
+								<div
+									className={cl`
 						${styles.flex} 
 						${styles.routing_and_destination}
 					`}
@@ -344,14 +366,14 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									`}
 										style={{ '--temp-color': tempColor }}
 									>
-										<p style={{
-											fontSize : 9,
-											padding  : '0 4px',
-											color    : tempColor,
-										}}
+										<p
+											style={{
+												fontSize: 9,
+												padding: '0 4px',
+												color: tempColor,
+											}}
 										>
 											Routing and Destination
-
 										</p>
 									</div>
 								</div>
@@ -376,7 +398,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 9 }}>
 									<span style={{ color: tempColor }}>to</span>
-									<div className={cl`
+									<div
+										className={cl`
 										${styles.flex} 
 										${styles.flex_font_bold}
 									`}
@@ -398,7 +421,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 9 }}>
 									<span style={{ color: tempColor }}>by</span>
-									<div className={cl`
+									<div
+										className={cl`
 										${styles.flex} 
 										${styles.flex_font_bold}
 									`}
@@ -420,7 +444,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 9 }}>
 									<span style={{ color: tempColor }}>to</span>
-									<div className={cl`
+									<div
+										className={cl`
 										${styles.flex} 
 										${styles.flex_font_bold}
 									`}
@@ -431,7 +456,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									</div>
 								</p>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 						${styles.flex} 
 						${styles.flex_padding_left}
 						${styles.to_by}
@@ -439,7 +465,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							>
 								<p style={{ fontSize: 9 }}>
 									<span style={{ color: tempColor }}>by</span>
-									<div className={cl`
+									<div
+										className={cl`
 										${styles.flex} 
 										${styles.flex_font_bold}
 									`}
@@ -459,7 +486,10 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							${styles.blockrow_border}
 							${styles.currency_declared_value_to_by_flight}
 						`}
-					style={{ '--temp-color': tempColor, borderBottom: `1px solid ${tempColor}` }}
+					style={{
+						'--temp-color': tempColor,
+						borderBottom: `1px solid ${tempColor}`,
+					}}
 				>
 					<div
 						className={cl`
@@ -486,24 +516,29 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								`}
 								style={{ '--temp-color': tempColor }}
 							>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex}
 					${styles.currency_top_chgs}
 				`}
 								>
 									<p style={{ fontSize: 9, color: tempColor }}>Currency</p>
 								</div>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex}
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex_d}
 				`}
 								>
-									<p className={styles.data} style={{ fontSize: 13 }}>{formData.currency}</p>
+									<p className={styles.data} style={{ fontSize: 13 }}>
+										{formData.currency}
+									</p>
 								</div>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 					${styles.flex} 
 					${styles.chgs}
 				`}
@@ -511,7 +546,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								<p style={{ fontSize: 8, color: tempColor }}>CHGS</p>
 							</div>
 						</div>
-						<div className={cl`
+						<div
+							className={cl`
 					${styles.flex} 
 					${styles.flex_in_flex_d}
 				`}
@@ -535,7 +571,8 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								>
 									<p style={{ fontSize: 9, color: tempColor }}>WT/VAL</p>
 								</div>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex_row} 
 					${styles.requested_wtval_other}
 				`}
@@ -548,60 +585,84 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										`}
 										style={{ '--temp-color': tempColor }}
 									>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.wtval_other_bottom_left_ppd_coll}
 				`}
 										>
-											<p style={{ margin: '2px 0px', fontSize: 7, color: tempColor }}>
+											<p
+												style={{
+													margin: '2px 0px',
+													fontSize: 7,
+													color: tempColor,
+												}}
+											>
 												PPD
 											</p>
 										</div>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
+											<p
+												className={styles.data}
+												style={{ fontSize: 12, color: tempColor }}
+											>
 												{formData.paymentTerm === 'prepaid' && 'P'}
 											</p>
 										</div>
 									</div>
-									<div className={cl`
+									<div
+										className={cl`
 					${styles.flex_col} 
 					${styles.flexcol_in_flex}
 				`}
 									>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex}
 				`}
 										>
-											<p style={{ margin: '2px 0px', fontSize: 7, color: tempColor }}>
+											<p
+												style={{
+													margin: '2px 0px',
+													fontSize: 7,
+													color: tempColor,
+												}}
+											>
 												COLL
 											</p>
 										</div>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
+											<p
+												className={styles.data}
+												style={{ fontSize: 12, color: tempColor }}
+											>
 												{formData.paymentTerm === 'collect' && 'C'}
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 					${styles.flex_col} 
 					${styles.flexcol_in_flex}
 				`}
@@ -617,12 +678,12 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								>
 									<p style={{ fontSize: 9, color: tempColor }}>Other</p>
 								</div>
-								<div className={cl`
+								<div
+									className={cl`
 					${styles.flex_row} 
 					${styles.requested_wtval_other}
 				`}
 								>
-
 									<div
 										className={cl`
 											${styles.flex_col} 
@@ -631,55 +692,76 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										`}
 										style={{ '--temp-color': tempColor }}
 									>
-
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.wtval_other_bottom_left_ppd_coll}
 				`}
 										>
-											<p style={{ margin: '2px 0px', fontSize: 7, color: tempColor }}>
+											<p
+												style={{
+													margin: '2px 0px',
+													fontSize: 7,
+													color: tempColor,
+												}}
+											>
 												PPD
 											</p>
 										</div>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
+											<p
+												className={styles.data}
+												style={{ fontSize: 12, color: tempColor }}
+											>
 												{formData.paymentTerm === 'prepaid' && 'P'}
 											</p>
 										</div>
 									</div>
-									<div className={cl`
+									<div
+										className={cl`
 					${styles.flex_col} 
 					${styles.flexcol_in_flex}
 				`}
 									>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.wtval_other_bottom_left_ppd_coll}
 				`}
 										>
-
-											<p style={{ margin: '2px 0px', fontSize: 7, color: tempColor }}>
+											<p
+												style={{
+													margin: '2px 0px',
+													fontSize: 7,
+													color: tempColor,
+												}}
+											>
 												COLL
 											</p>
 										</div>
-										<div className={cl`
+										<div
+											className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
+											<p
+												className={styles.data}
+												style={{ fontSize: 12, color: tempColor }}
+											>
 												{formData.paymentTerm === 'collect' && 'C'}
 											</p>
 										</div>
@@ -697,7 +779,9 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<p style={{ fontSize: 8.3, color: tempColor }}>Declared Value for Carriage</p>
+						<p style={{ fontSize: 8.3, color: tempColor }}>
+							Declared Value for Carriage
+						</p>
 						{formData.declaredValueForCarriage}
 					</div>
 					<div
@@ -710,21 +794,29 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						style={{ '--temp-color': tempColor }}
 					>
 						<div className={styles.flex_col}>
-							<p style={{ fontSize: 8.3, color: tempColor }}>Declared Value for Customs</p>
+							<p style={{ fontSize: 8.3, color: tempColor }}>
+								Declared Value for Customs
+							</p>
 							{formData.valueForCustom}
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className={styles.flex} style={{ borderBottom: `1px solid ${tempColor}` }}>
+			<div
+				className={styles.flex}
+				style={{ borderBottom: `1px solid ${tempColor}` }}
+			>
 				<div
 					className={cl`
 						${styles.block_row} 
 						${styles.blockrow_border}
 						${styles.blockrow_in_flex}
 					`}
-					style={{ '--temp-color': tempColor, borderLeft: `1px solid ${tempColor}` }}
+					style={{
+						'--temp-color': tempColor,
+						borderLeft: `1px solid ${tempColor}`,
+					}}
 				>
 					<div
 						className={cl`
@@ -733,12 +825,16 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						${styles.flex_border_right}
 						${styles.flex_in_flex}
 					`}
-						style={{ '--temp-color': tempColor, paddingLeft: 5, paddingRight: 5 }}
+						style={{
+							'--temp-color': tempColor,
+							paddingLeft: 5,
+							paddingRight: 5,
+						}}
 					>
 						<p style={{ fontSize: 9 }}>
-							<span style={{ color: tempColor }}>Airport of Destination</span>
-							{' '}
-							<div className={cl`
+							<span style={{ color: tempColor }}>Airport of Destination</span>{' '}
+							<div
+								className={cl`
 						${styles.flex} 
 						${styles.flex_font_bold}
 						${styles.flex_justify_center}
@@ -749,7 +845,6 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									style={{ fontSize: 14, textTransform: 'uppercase' }}
 								>
 									{formData?.destination}
-
 								</p>
 							</div>
 						</p>
@@ -762,12 +857,14 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<div className={cl`
+						<div
+							className={cl`
 								${styles.flex_row} 
 								${styles.referrence_optional_flight_date_top}
 							`}
 						>
-							<div className={cl`
+							<div
+								className={cl`
 									${styles.flex} 
 				
 									${styles.requested_flight_date_top_left}
@@ -781,21 +878,26 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 								`}
 								style={{ '--temp-color': tempColor }}
 							>
-								<div className={cl`
+								<div
+									className={cl`
 										${styles.flex} 
 										${styles.requested_flight_date_text}
 									`}
 								>
-									<p style={{ fontSize: 9, color: tempColor }}>Requested Flight/Date</p>
+									<p style={{ fontSize: 9, color: tempColor }}>
+										Requested Flight/Date
+									</p>
 								</div>
 							</div>
-							<div className={cl`
+							<div
+								className={cl`
 									${styles.flex} 
 									${styles.requested_flight_date_top_right}
 								`}
 							/>
 						</div>
-						<div className={cl`
+						<div
+							className={cl`
 									${styles.flex_row} 
 									${styles.requested_wtval_other}
 								`}
@@ -808,15 +910,14 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 									`}
 								style={{ '--temp-color': tempColor }}
 							/>
-							<div className={cl`
+							<div
+								className={cl`
 										${styles.flex} 
 										${styles.flex_in_flex}
 									`}
 							/>
-
 						</div>
 					</div>
-
 				</div>
 				<div
 					className={cl`
@@ -833,26 +934,32 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 							${styles.amount_of_insurance}
 						`}
 						style={{
-							'--temp-color' : tempColor,
-							borderLeft     : `1px solid ${tempColor}`,
+							'--temp-color': tempColor,
+							borderLeft: `1px solid ${tempColor}`,
 						}}
 					>
-						<div className={cl`
+						<div
+							className={cl`
 					${styles.flex} 
 					${styles.flex_justify_center}
 					${styles.amount_of_insurance_top}
 				`}
 						>
-							<p style={{ fontSize: 9, color: tempColor }}>Amount of Insurance</p>
+							<p style={{ fontSize: 9, color: tempColor }}>
+								Amount of Insurance
+							</p>
 						</div>
-						<div className={cl`
+						<div
+							className={cl`
 					${styles.flex} 
 					${styles.flex_font_bold}
 					${styles.flex_justify_center}
 					${styles.amount_of_insurance_bottom}
 				`}
 						>
-							<p className={styles.data} style={{ fontSize: 15 }}>{formData.amountOfInsurance}</p>
+							<p className={styles.data} style={{ fontSize: 15 }}>
+								{formData.amountOfInsurance}
+							</p>
 						</div>
 					</div>
 					<div
