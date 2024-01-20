@@ -2,23 +2,21 @@ import {
   Layout, Menu, Avatar,
 } from 'antd';
 import {
-   UserOutlined,
+  UserOutlined,
+// eslint-disable-next-line import/no-unresolved
 } from '@ant-design/icons';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import navData, { navRoute } from './sideNavContent';
+import navData from './sideNavContent';
 import style from './style.module.css';
 
 const { Header } = Layout;
 
 function PageSider() {
-
   const [collapsed, setCollapsed] = useState(false);
   const { Sider } = Layout;
 
-  const profileImage = () => {
-    return <UserOutlined />;
-  };
+  const profileImage = () => <UserOutlined />;
 
   return (
     <Sider
@@ -33,7 +31,7 @@ function PageSider() {
       <Menu theme="dark" mode="inline">
         <Header className="site-layout-background" style={{ color: 'white', paddingLeft: '20px' }}>
           <strong>
-            <Link href="/admin">AWB Generator</Link>
+            <Link href="/admin">{collapsed ? 'AWB' : 'AWB Generator'}</Link>
           </strong>
         </Header>
 

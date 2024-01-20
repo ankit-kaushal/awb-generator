@@ -1,11 +1,11 @@
-import checkAWBValidation from '../utils/checkAWBNumberValidation'
+import checkAWBValidation from '../utils/checkAWBNumberValidation';
 
 const CURRENCIES = [
   { value: 'INR', label: 'INR' },
   { value: 'USD', label: 'USD' },
   { value: 'GBP', label: 'GBP' },
   { value: 'EUR', label: 'EUR' },
-]
+];
 
 const FOOTER_MAPPING = [
   { value: 'copy_12', label: 'COPY 12(FOR CUSTOMS)' },
@@ -20,7 +20,7 @@ const FOOTER_MAPPING = [
   { value: 'original_3', label: 'ORIGINAL 3 (FOR SHIPPER)' },
   { value: 'original_2', label: 'ORIGINAL 2 (FOR CONSIGNEE)' },
   { value: 'original_1', label: 'ORIGINAL 1 (FOR ISSUING CARRIER)' },
-]
+];
 
 const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
   main: [
@@ -566,6 +566,6 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
       span: 5,
     },
   ],
-})
+});
 
-export default controls
+export default controls;

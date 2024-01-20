@@ -1,33 +1,28 @@
 import {
-  LayoutOutlined, TableOutlined, PictureOutlined, UserOutlined, HomeOutlined,
+  LayoutOutlined, FolderViewOutlined, CoffeeOutlined, HomeOutlined,
+// eslint-disable-next-line import/no-unresolved
 } from '@ant-design/icons';
 
-const navRoute = ['/admin', '/admin/page-manager', '/admin/datastore', '/admin/assets', '/admin/users'];
+const navRoute = ['/', '/sample', '/admin/datastore'];
 
 const navData = [{
   name: 'Home',
-  path: '/admin',
+  path: '/',
   icon: <HomeOutlined />,
 },
 {
-  name: 'Page Manager',
-  path: '/admin/page-manager',
+  name: 'AWB Generator',
+  path: '/generate',
   icon: <LayoutOutlined />,
 }, {
-  name: 'Data Table',
-  path: '/admin/datastore',
-  icon: <TableOutlined />,
+  name: 'AWB Sample',
+  path: '/sample',
+  icon: <FolderViewOutlined />,
 },
 {
-  name: 'Assets',
-  path: '/admin/assets',
-  icon: <PictureOutlined />,
-},
-{
-  name: 'Users',
-  path: '/admin/users',
-  icon: <UserOutlined />,
-
+  name: 'Support',
+  path: 'https://www.buymeacoffee.com/ankitkaushal',
+  icon: <CoffeeOutlined />,
 },
 
 ];

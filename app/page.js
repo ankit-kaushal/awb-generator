@@ -1,9 +1,10 @@
-import AwbGenerator from '@/ui'
+'use client';
 
-export default function Home() {
+// eslint-disable-next-line import/extensions, import/no-unresolved
+import Home from '@/ui/page-components/Home';
+
+export default function HomePage() {
   return (
-    <div>
-      <AwbGenerator></AwbGenerator>
-    </div>
-  )
+    <Home />
+  );
 }

@@ -1,11 +1,11 @@
-import styles from './styles.module.css'
-import Layout from '../../commons/Layout'
-import { Steps, Button } from 'antd'
-import { useState } from 'react'
+import { Steps, Button } from 'antd';
+import { useState } from 'react';
+import styles from './styles.module.css';
+import Layout from '../../commons/Layout';
 
-const DECIMAL_PLACE = 2
+const DECIMAL_PLACE = 2;
 
-const FormContainer = ({
+function FormContainer({
   formValues = {},
   fields = {},
   errors = {},
@@ -13,21 +13,21 @@ const FormContainer = ({
   setValue = () => {},
   setPreview = () => {},
   handleSubmit = () => {},
-}) => {
+}) {
   const calculateCharges = () => {
     const updatedCharges = (formValues.carrierOtherCharges || []).map(
       (charge) => {
-        let price = 0
+        let price = 0;
         price = Number(
           (Number(charge.chargeUnit) * Number(charge.quantity)).toFixed(
             DECIMAL_PLACE,
           ),
-        )
-        return { ...charge, price }
+        );
+        return { ...charge, price };
       },
-    )
-    setValue('carrierOtherCharges', updatedCharges)
-  }
+    );
+    setValue('carrierOtherCharges', updatedCharges);
+  };
 
   const STEPS = [
     {
@@ -51,7 +51,7 @@ const FormContainer = ({
               size="small"
               type="primary"
               onClick={() => {
-                calculateCharges()
+                calculateCharges();
               }}
             >
               Calculate
@@ -67,23 +67,23 @@ const FormContainer = ({
         <Layout fields={fields?.handling} errors={errors} control={control} />
       ),
     },
-  ]
+  ];
 
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   const next = () => {
-    setCurrent(current + 1)
-  }
+    setCurrent(current + 1);
+  };
 
   const prev = () => {
-    setCurrent(current - 1)
-  }
+    setCurrent(current - 1);
+  };
 
   const onSubmit = () => {
-    setPreview(true)
-  }
+    setPreview(true);
+  };
 
-  const items = STEPS.map((item) => ({ key: item.key, title: item.title }))
+  const items = STEPS.map((item) => ({ key: item.key, title: item.title }));
 
   return (
     <div className={styles.container}>
@@ -103,7 +103,7 @@ const FormContainer = ({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default FormContainer
+export default FormContainer;

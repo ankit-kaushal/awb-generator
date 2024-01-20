@@ -4,11 +4,11 @@
 
 import { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import controls from './configurations/controls';
-import { useForm } from './commons/Controller';
-import FormContainer from './page-components/FormContainer';
-import { Modal } from './commons/Components';
-import GenerateDoc from './page-components/GenerateDoc';
+import controls from '../../configurations/controls';
+import { useForm } from '../../commons/Controller';
+import FormContainer from '../FormContainer';
+import { Modal } from '../../commons/Components';
+import GenerateDoc from '../GenerateDoc';
 
 const AGENT_OTHER_CHARGES_CODE = [{ code: 'AWB', price: '150' }, { code: 'PCA', price: '250' }];
 const NULL_VALUE = 0;
