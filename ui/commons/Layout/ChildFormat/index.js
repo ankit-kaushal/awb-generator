@@ -1,6 +1,6 @@
-import { useFieldArray } from '../../Controller';
 import React, { useEffect } from 'react';
 import { Button } from 'antd';
+import { useFieldArray } from '../../Controller';
 
 import Child from './child';
 import styles from './styles.module.css';
@@ -28,7 +28,6 @@ function FieldArray({
 		if (fields.length === 0) {
 			append(CHILD_EMPTY_VALUES);
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
@@ -55,13 +54,10 @@ function FieldArray({
 						size="small"
 						onClick={() => append(CHILD_EMPTY_VALUES)}
 					>
-						+
-						{' '}
-						{buttonText}
+						+ {buttonText}
 					</Button>
 				) : null}
 			</div>
-
 		</div>
 	);
 }

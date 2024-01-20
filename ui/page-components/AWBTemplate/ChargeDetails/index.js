@@ -27,8 +27,6 @@ function ChargeDetails({ formData, data = {}, whiteout = false }) {
 		tempColor = 'transparent';
 	}
 
-	console.log('formData', formData);
-
 	return (
 		<div className={styles.container}>
 			<div

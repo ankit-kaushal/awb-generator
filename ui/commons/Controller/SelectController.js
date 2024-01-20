@@ -3,9 +3,7 @@ import { Controller } from 'react-hook-form';
 import { Select } from 'antd';
 
 function SelectController(props) {
-	const {
-		name, control, rules, value, ...rest
-	} = props;
+	const { name, control, rules, value, ...rest } = props;
 
 	return (
 		<Controller
@@ -14,7 +12,7 @@ function SelectController(props) {
 			name={name}
 			defaultValue={value}
 			rules={rules}
-			render={({ field: { onChange, onBlur, value : newValue } }) => (
+			render={({ field: { onChange, onBlur, value: newValue } }) => (
 				<Select
 					{...rest}
 					key={`${name}_${newValue}`}

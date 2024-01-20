@@ -7,7 +7,7 @@ const cl = (...args) => {
 	let final = '';
 	template.forEach((templateString) => {
 		const value = values.shift() || '';
-		final += (templateString.toString() + value.toString());
+		final += templateString.toString() + value.toString();
 	});
 	final = final.replace(/[\t\n]/g, ' ').trim();
 	final = final.replace(/\s\s+/g, ' ').trim();

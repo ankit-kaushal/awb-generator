@@ -4,9 +4,7 @@ import FieldArray from './ChildFormat';
 import Item from './Item';
 import styles from './styles.module.css';
 
-function Layout({
-	control, fields, showElements = {}, errors,
-}) {
+function Layout({ control, fields, showElements = {}, errors }) {
 	let rowWiseFields = [];
 	const TOTAL_FIELDS = [];
 	let span = 0;
@@ -37,16 +35,26 @@ function Layout({
 			{Object.keys(TOTAL_FIELDS).map((field) => (
 				<div key={field} className={styles.row}>
 					{TOTAL_FIELDS[field].map((fieldsItem) => {
-						const { type, heading = '', label = '', rules = {}, span: fieldArraySpan } = fieldsItem;
+						const {
+							type,
+							heading = '',
+							label = '',
+							rules = {},
+							span: fieldArraySpan,
+						} = fieldsItem;
 						const flex = ((fieldArraySpan || 12) / 12) * 100 - 1;
-						const show = (!(TOTAL_FIELDS[field].name in showElements) || showElements[fieldsItem.name]);
+						const show =
+							!(TOTAL_FIELDS[field].name in showElements) ||
+							showElements[fieldsItem.name];
 						if (type === 'fieldArray' && show) {
 							return (
-								<div key={fieldsItem.name} style={{ width: `${flex}%`, padding: '4px' }}>
-									<div className={styles.heading}>
-										{heading}
-									</div>
-									<div className={`${styles.label} 
+								<div
+									key={fieldsItem.name}
+									style={{ width: `${flex}%`, padding: '4px' }}
+								>
+									<div className={styles.heading}>{heading}</div>
+									<div
+										className={`${styles.label} 
 									${rules?.required ? styles.required_field : ''}`}
 									>
 										{label}
@@ -58,20 +66,16 @@ function Layout({
 										control={control}
 										showElements={showElements}
 									/>
-
 								</div>
 							);
 						}
-						return show
-							? (
-								<Item
-									control={control}
-									error={errors[fieldsItem.name]}
-									{...fieldsItem}
-								/>
-
-							)
-							: null;
+						return show ? (
+							<Item
+								control={control}
+								error={errors[fieldsItem.name]}
+								{...fieldsItem}
+							/>
+						) : null;
 					})}
 				</div>
 			))}

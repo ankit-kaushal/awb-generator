@@ -1,7 +1,5 @@
 const getErrorMessage = (props) => {
-	const {
-		error, rules, label,
-	} = props;
+	const { error, rules, label } = props;
 	const errorMessage = [];
 
 	if (error) {
@@ -9,14 +7,10 @@ const getErrorMessage = (props) => {
 			errorMessage.push(error?.message || `${label} is Required`);
 		}
 		if ((rules?.min || rules?.min === 0) && error.type === 'min') {
-			errorMessage.push(
-				`${label} cannot be less than ${rules.min}`,
-			);
+			errorMessage.push(`${label} cannot be less than ${rules.min}`);
 		}
 		if (rules?.max && error.type === 'max') {
-			errorMessage.push(
-				`${label} cannot be greater than ${rules.max}`,
-			);
+			errorMessage.push(`${label} cannot be greater than ${rules.max}`);
 		}
 		if (rules?.minLength && error.type === 'minLength') {
 			errorMessage.push(
@@ -24,9 +18,7 @@ const getErrorMessage = (props) => {
 			);
 		}
 		if (rules?.maxLength && error.type === 'maxLength') {
-			errorMessage.push(
-				`${label} should be less than ${rules.maxLength}`,
-			);
+			errorMessage.push(`${label} should be less than ${rules.maxLength}`);
 		}
 	}
 	if (errorMessage.length) {

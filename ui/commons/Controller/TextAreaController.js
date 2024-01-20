@@ -1,11 +1,9 @@
-import { Textarea } from '../Components';
 import React from 'react';
 import { Controller } from 'react-hook-form';
+import { Textarea } from '../Components';
 
 function TextAreaController(props) {
-	const {
-		name, control, rules, value, ...rest
-	} = props;
+	const { name, control, rules, value, ...rest } = props;
 
 	return (
 		<Controller

@@ -2,9 +2,9 @@
 import AwbGenerator from '@/ui/page-components/AWBGenerator';
 
 export default function Generate() {
-  return (
-    <div>
-      <AwbGenerator />
-    </div>
-  );
+	return (
+		<div>
+			<AwbGenerator />
+		</div>
+	);
 }

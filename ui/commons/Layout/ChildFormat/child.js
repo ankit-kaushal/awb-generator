@@ -49,9 +49,9 @@ function Child({
 						const Element = getElementController(controlItem.type);
 
 						const errorOriginal = getErrorMessage({
-							error : error?.[controlItem.name],
-							rules : controlItem?.rules,
-							label : controlItem?.label,
+							error: error?.[controlItem.name],
+							rules: controlItem?.rules,
+							label: controlItem?.label,
 						});
 						const EXTRA_PROPS = {};
 						if (controlItem.customProps?.options) {
@@ -60,8 +60,13 @@ function Child({
 						const flex = ((controlItem?.span || 12) / 12) * 100 - 1;
 						if (!Element) return null;
 						return (
-							<div key={controlItem.name} className={styles.element} style={{ width: `${flex}%` }}>
-								<div className={`${styles.label} 
+							<div
+								key={controlItem.name}
+								className={styles.element}
+								style={{ width: `${flex}%` }}
+							>
+								<div
+									className={`${styles.label} 
 								${controlItem?.rules?.required ? styles.required_field : ''}`}
 								>
 									{controlItem?.label}
@@ -74,14 +79,8 @@ function Child({
 									name={`${name}.${index}.${controlItem.name}`}
 									index={index}
 									control={control}
-
 								/>
-								<p
-									className={styles.font_style}
-								>
-									{errorOriginal}
-
-								</p>
+								<p className={styles.font_style}>{errorOriginal}</p>
 							</div>
 						);
 					})}
@@ -91,11 +90,13 @@ function Child({
 								className={`form-fieldArray-${name}-remove`}
 								onClick={() => remove(index, 1)}
 								style={{
-									width: '1.8em', height: '1.8em', margin: '8px', cursor: 'pointer',
+									width: '1.8em',
+									height: '1.8em',
+									margin: '8px',
+									cursor: 'pointer',
 								}}
 							/>
 						) : null}
-
 					</div>
 				</div>
 			))}

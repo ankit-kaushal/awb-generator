@@ -1,4 +1,9 @@
-import { InputController, TextAreaController, SelectController, DatepickerController } from '../Controller';
+import {
+	InputController,
+	TextAreaController,
+	SelectController,
+	DatepickerController,
+} from '../Controller';
 
 const getElementController = (type = 'text') => {
 	switch (type) {

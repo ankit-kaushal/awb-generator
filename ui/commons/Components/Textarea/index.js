@@ -24,7 +24,6 @@ function Textarea(
 		rows,
 		cols,
 		maxLength,
-		autoFocus,
 	},
 	ref,
 ) {
@@ -60,7 +59,6 @@ function Textarea(
 				rows={rows}
 				cols={cols}
 				maxLength={maxLength}
-				autoFocus={autoFocus}
 			/>
 		</div>
 	);

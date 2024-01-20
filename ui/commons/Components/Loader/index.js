@@ -4,9 +4,7 @@ import cl from '../utils/classname-processor';
 
 import styles from './styles.module.css';
 
-function Loader({
-	id, className, style, themeType = 'primary',
-}) {
+function Loader({ id, className, style, themeType = 'primary' }) {
 	return (
 		<div
 			id={id}

@@ -3,9 +3,7 @@ import React from 'react';
 import { Controller } from 'react-hook-form';
 
 function InputController(props) {
-	const {
-		name, control, value, rules, ...rest
-	} = props;
+	const { name, control, value, rules, ...rest } = props;
 
 	return (
 		<Controller

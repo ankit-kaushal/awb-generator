@@ -9,22 +9,14 @@ module.exports = {
 		'object-curly-newline': [
 			'error',
 			{
+				ImportDeclaration: { multiline: true, consistent: true },
+				ExportDeclaration: { multiline: true, consistent: true },
 				ObjectExpression: {
-					minProperties: 6,
 					multiline: true,
 					consistent: true,
+					minProperties: 4,
 				},
-				ObjectPattern: { minProperties: 6, multiline: true, consistent: true },
-				ImportDeclaration: {
-					minProperties: 6,
-					multiline: true,
-					consistent: true,
-				},
-				ExportDeclaration: {
-					minProperties: 6,
-					multiline: true,
-					consistent: true,
-				},
+				ObjectPattern: { multiline: true, consistent: true },
 			},
 		],
 
