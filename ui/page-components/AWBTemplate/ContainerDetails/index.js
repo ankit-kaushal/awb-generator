@@ -103,7 +103,7 @@ function ContainerDetails({
 								${styles.block_a_container_top_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>{formData?.totalPackagesCount}</p>
+								<p className={styles.data} style={{ fontSize: 13 }}>{formData?.totalPackagesCount}</p>
 							</div>
 							<div className={cl`
 								${styles.flex} 
@@ -116,7 +116,7 @@ function ContainerDetails({
 								`}
 								>
 									{' '}
-									<p style={{ fontSize: 11 }}>
+									<p className={styles.data} style={{ fontSize: 11 }}>
 										<div>Volume Weight:</div>
 									</p>
 									<div className={cl`
@@ -124,7 +124,7 @@ function ContainerDetails({
 										${styles.vol_weight_box}
 									`}
 									>
-										<p style={{ fontSize: 11 }} className="volume_box">
+										<p style={{ fontSize: 11 }} className={`${styles.data} volume_box`}>
 											{`${formData.volumetricWeight} Kgs(${dimension?.[0]?.unit || 'Cms'})`}
 										</p>
 									</div>
@@ -138,7 +138,7 @@ function ContainerDetails({
 										${styles.vol_weight_box}
 									`}
 									>
-										<p style={{ fontSize: 11 }} className="volume_box">
+										<p style={{ fontSize: 11 }} className={`${styles.data} volume_box`}>
 											{dimension && dimension.map((item) => item.length && `${item.length}x${item.width}x${item.height}/${item.packages_count} 
 											`)}
 										</p>
@@ -149,14 +149,14 @@ function ContainerDetails({
 									${styles.margin_remarks}
 								`}
 								>
-									<p style={{ fontSize: 11, marginRight: 4 }}>Remarks:</p>
+									<p className={styles.data} style={{ fontSize: 11, marginRight: 4 }}>Remarks:</p>
 									<div className={cl`
 										${styles.flex} 
 										${styles.vol_weight_box}
 									`}
 									>
-										<p style={{ fontSize: 11 }} className="volume_box">
-											<div className="remark_box">{formData.remark}</div>
+										<p style={{ fontSize: 11 }} className={`${styles.data} volume_box`}>
+											<div className={`${styles.data} remark_box`}>{formData.remark}</div>
 										</p>
 									</div>
 								</div>
@@ -170,7 +170,7 @@ function ContainerDetails({
 							${styles.block_a_container_bottom_package}
 						`}
 						>
-							<p style={{ fontSize: 13 }}>{formData?.totalPackagesCount}</p>
+							<p className={styles.data} style={{ fontSize: 13 }}>{formData?.totalPackagesCount}</p>
 						</div>
 					</div>
 
@@ -214,7 +214,7 @@ function ContainerDetails({
 								${styles.block_a_container_bottom_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>{formData?.weight}</p>
+								<p className={styles.data} style={{ fontSize: 13 }}>{formData?.weight}</p>
 							</div>
 						</div>
 						<div className={cl`
@@ -229,7 +229,7 @@ function ContainerDetails({
 								${styles.block_a_container_bottom_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>{formData?.weight}</p>
+								<p className={styles.data} style={{ fontSize: 13 }}>{formData?.weight}</p>
 							</div>
 						</div>
 					</div>
@@ -342,7 +342,7 @@ function ContainerDetails({
 							`}
 								style={{ '--temp-color': tempColor }}
 							>
-								<p style={{ fontSize: 13, textTransform: 'uppercase' }}>{formData.class}</p>
+								<p className={styles.data} style={{ fontSize: 13, textTransform: 'uppercase' }}>{formData.class}</p>
 							</div>
 							<div className={cl`
 								${styles.flex} 
@@ -410,7 +410,7 @@ function ContainerDetails({
 								${styles.block_a_container_bottom_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>{formData?.chargeableWeight}</p>
+								<p className={styles.data} style={{ fontSize: 13 }}>{formData?.chargeableWeight}</p>
 							</div>
 						</div>
 					</div>
@@ -462,7 +462,7 @@ function ContainerDetails({
 								${styles.block_a_container_bottom_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>{formData?.class === 'a' ? 'AS AGREED' : formData.ratePerKg}</p>
+								<p className={styles.data} style={{ fontSize: 13 }}>{formData?.class === 'a' ? 'AS AGREED' : formData.ratePerKg}</p>
 							</div>
 						</div>
 					</div>
@@ -517,7 +517,7 @@ function ContainerDetails({
 								${styles.block_a_container_bottom_package}
 							`}
 							>
-								<p style={{ fontSize: 13 }}>
+								<p className={styles.data} style={{ fontSize: 13 }}>
 									{formData?.class === 'a' ? 'AS AGREED' : formData.amount}
 								</p>
 							</div>
@@ -530,6 +530,7 @@ function ContainerDetails({
 							`}
 						>
 							<div className={cl`
+								${styles.data}
 								${styles.flex} 
 								${styles.block_a_container_bottom_package}
 							`}

@@ -1,4 +1,4 @@
-import { Datepicker } from '../Components';
+import { DatePicker } from 'antd';
 import React from 'react';
 import { Controller } from 'react-hook-form';
 
@@ -15,7 +15,7 @@ function DatepickerController(props) {
 			rules={rules}
 			defaultValue={value}
 			render={({ field: { onChange, onBlur, value: newValue } }) => (
-				<Datepicker
+				<DatePicker
 					disable={rest?.disabled || false}
 					showTimeSelect={rest?.withTimePicker || false}
 					{...rest}
@@ -28,7 +28,7 @@ function DatepickerController(props) {
 							rest?.onChange(e);
 						}
 					}}
-					value={newValue}
+					// value={value}
 					onBlur={onBlur}
 					data-test-value={value}
 				/>

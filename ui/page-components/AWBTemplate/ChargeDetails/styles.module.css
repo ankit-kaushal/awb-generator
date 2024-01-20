@@ -11,6 +11,13 @@
 	margin-top: 2px;
 }
 
+.data {
+	font-family: 'Courier New', monospace;
+	color: #474747;
+	line-height: 1.2;
+	font-size: 14px;
+}
+
 .block {
 	display: flex;
 	flex: 1;

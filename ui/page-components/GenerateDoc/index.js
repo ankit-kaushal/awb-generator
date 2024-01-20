@@ -13,7 +13,7 @@ import SelectDocumentCopies from './SelectDocumentCopies';
 
 const ZERO_COORDINATE = 0;
 const UPDATE_CHECK_INDEX = 1;
-const PDF_HEIGHT_ADJUST_VALUE = 14;
+const PDF_HEIGHT_ADJUST_VALUE = 12;
 const PDF_SCALE = 4.5;
 const TWELEVE_COPIES_LAST_INDEX = 1;
 const INCLUDE_TNC = ['original_3', 'original_2', 'original_1'];

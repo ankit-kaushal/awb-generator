@@ -57,7 +57,7 @@ function OtherChargeDetails({
 							${styles.other_charge_text} 
 						`}
 						>
-							<p style={{ fontSize: 13 }}>
+							<p className={styles.data} style={{ fontSize: 13 }}>
 								<div style={{ height: '30%' }}>
 									{formData?.class === 'a' ? '' : (agentOtherCharges || [{}]).map((item) => `${item.code.toUpperCase()}: ${item.price} `)}
 								</div>
@@ -141,7 +141,7 @@ function OtherChargeDetails({
 							${styles.place_container_text} 
 						`}
 						>
-							<p style={{ fontSize: 14 }}>
+							<p className={styles.data} style={{ fontSize: 14 }}>
 								{formatDate(formData.executedDate) || formatDate(new Date())}
 							</p>
 						</div>
@@ -229,6 +229,7 @@ function OtherChargeDetails({
 						/>
 					</div>
 					<div className={cl`
+								${styles.data}
 								${styles.flex} 
 								${styles.end_final} 
 							`}

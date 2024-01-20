@@ -10,6 +10,9 @@
 .child {
 	width: 100%;
 }
+.child :global .ant-btn {
+	font-size: 10px;
+}
 .font_style {
 	padding-left: 4px;
 	margin: 0;
@@ -31,11 +34,15 @@
 	font-weight: 400;
 	color: #bdbdbd;
 }
+.element :global .ant-select {
+	width: 100%;
+}
 .label {
 	height: 16px;
-	margin-bottom: 6px;
+	margin-bottom: 8px;
+	font-size: 14px;
 }
 .required_field::after {
-	color: var(--color-primary-error-red-2);
+	color: #ee3425;
 	content: " *";
 }

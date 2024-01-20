@@ -33,7 +33,7 @@ function ShipperConsigneeDetails({
 					`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<p style={{ fontSize: 18 }}>
+						<p className={styles.data} style={{ fontSize: 18 }}>
 							{awbNumber?.substring(0, 3)}
 						</p>
 					</div>
@@ -45,7 +45,7 @@ function ShipperConsigneeDetails({
 					`}
 						style={{ '--temp-color': tempColor }}
 					>
-						<p style={{ fontSize: 18 }}>{formData?.originPortCode}</p>
+						<p className={styles.data} style={{ fontSize: 18 }}>{formData?.originPortCode}</p>
 					</div>
 					<div className={cl`
 						${styles.flex} 
@@ -53,7 +53,7 @@ function ShipperConsigneeDetails({
 						${styles.mawb_number_subdivision_second} 
 					`}
 					>
-						<p style={{ fontSize: 18 }}>
+						<p className={styles.data} style={{ fontSize: 18 }}>
 							{awbNumber?.substring(4, 13)}
 						</p>
 					</div>
@@ -64,7 +64,7 @@ function ShipperConsigneeDetails({
 					${styles.mawb_bill_number} 
 				`}
 				>
-					<p style={{ fontSize: 18 }}>{awbNumber}</p>
+					<p className={styles.data} style={{ fontSize: 18 }}>{awbNumber}</p>
 				</div>
 			</div>
 			<div className={styles.flex} style={{ minHeight: 140 }}>
@@ -138,7 +138,7 @@ function ShipperConsigneeDetails({
 						${styles.airway_bill} 
 					`}
 					>
-						<p style={{ fontSize: 14.5, color: tempColor }}>Air Waybill</p>
+						<p className={styles.data} style={{ fontSize: 14.5, color: tempColor }}>Air Waybill</p>
 					</div>
 					<div className={cl`
 						${styles.flex} 

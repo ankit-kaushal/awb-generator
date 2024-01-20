@@ -15,7 +15,6 @@ const TO_FIXED_DECIMAL_PLACES = 2;
 const INCH_CM_FACTOR = 2.54;
 const VOLUME_FACTOR = 166.67;
 const PRECISION_VALUE = 1000000;
-const LENGTH_INDEX = 1;
 
 const AwbGenerator = () => {
 
@@ -41,6 +40,9 @@ const AwbGenerator = () => {
         setValue('agentName', 'COGOPORT FREIGHT FORCE PVT LTD');
         setValue('amountOfInsurance', 'NIL');
         setValue('accountingInformation', 'FREIGHT PREPAID');
+        setValue('paymentTerm', 'prepaid');
+        setValue('class', 'q');
+		setValue('currency', 'INR');
         setValue('agentOtherCharges', AGENT_OTHER_CHARGES_CODE);
     },[])
 
@@ -91,10 +93,12 @@ const AwbGenerator = () => {
     return (
         <div className={styles.container}>
             <h1>AWB Generator</h1>
-            <FormContainer 
+            <FormContainer
+				formValues={formValues}
                 fields={fields}
                 errors={errors}
                 control={control}
+				setValue={setValue}
                 setPreview={setPreview}
                 handleSubmit={handleSubmit}
             />

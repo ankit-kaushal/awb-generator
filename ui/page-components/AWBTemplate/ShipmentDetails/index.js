@@ -296,7 +296,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 						${styles.flex_font_bold}
 					`}
 									>
-										<p style={{ fontSize: 13 }}>
+										<p className={styles.data} style={{ fontSize: 13 }}>
 											{formData?.destinationPortCode}
 										</p>
 									</div>
@@ -325,7 +325,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 													${styles.flex_font_bold}
 												`}
 											>
-												<p style={{ fontSize: 12 }}>
+												<p className={styles.data} style={{ fontSize: 12 }}>
 													{formData.airlineIataCode}
 												</p>
 											</div>
@@ -381,7 +381,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										${styles.flex_font_bold}
 									`}
 									>
-										<p style={{ fontSize: 12 }}>
+										<p className={styles.data} style={{ fontSize: 12 }}>
 											{formData.to_one}
 										</p>
 									</div>
@@ -403,7 +403,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										${styles.flex_font_bold}
 									`}
 									>
-										<p style={{ fontSize: 12 }}>
+										<p className={styles.data} style={{ fontSize: 12 }}>
 											{formData.by_one}
 										</p>
 									</div>
@@ -425,7 +425,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										${styles.flex_font_bold}
 									`}
 									>
-										<p style={{ fontSize: 12 }}>
+										<p className={styles.data} style={{ fontSize: 12 }}>
 											{formData.to_two}
 										</p>
 									</div>
@@ -444,7 +444,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 										${styles.flex_font_bold}
 									`}
 									>
-										<p style={{ fontSize: 12 }}>
+										<p className={styles.data} style={{ fontSize: 12 }}>
 											{formData.by_two}
 										</p>
 									</div>
@@ -500,7 +500,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.flex_in_flex_d}
 				`}
 								>
-									<p style={{ fontSize: 13 }}>{formData.currency}</p>
+									<p className={styles.data} style={{ fontSize: 13 }}>{formData.currency}</p>
 								</div>
 							</div>
 							<div className={cl`
@@ -566,7 +566,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p style={{ fontSize: 12, color: tempColor }}>
+											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
 												{formData.paymentTerm === 'prepaid' && 'P'}
 											</p>
 										</div>
@@ -594,7 +594,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p style={{ fontSize: 12, color: tempColor }}>
+											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
 												{formData.paymentTerm === 'collect' && 'C'}
 											</p>
 										</div>
@@ -650,7 +650,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p style={{ fontSize: 12, color: tempColor }}>
+											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
 												{formData.paymentTerm === 'prepaid' && 'P'}
 											</p>
 										</div>
@@ -679,7 +679,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.flex_in_flex_b}
 				`}
 										>
-											<p style={{ fontSize: 12, color: tempColor }}>
+											<p className={styles.data} style={{ fontSize: 12, color: tempColor }}>
 												{formData.paymentTerm === 'collect' && 'C'}
 											</p>
 										</div>
@@ -852,7 +852,7 @@ function ShipmentDetails({ formData = {}, whiteout = false }) {
 					${styles.amount_of_insurance_bottom}
 				`}
 						>
-							<p style={{ fontSize: 15 }}>{formData.amountOfInsurance}</p>
+							<p className={styles.data} style={{ fontSize: 15 }}>{formData.amountOfInsurance}</p>
 						</div>
 					</div>
 					<div

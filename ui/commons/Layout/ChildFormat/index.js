@@ -1,6 +1,6 @@
 import { useFieldArray } from '../../Controller';
 import React, { useEffect } from 'react';
-import { Button } from '@/ui/commons/Components';
+import { Button } from 'antd';
 
 import Child from './child';
 import styles from './styles.module.css';
@@ -51,8 +51,8 @@ function FieldArray({
 				{showButtons && !disabled ? (
 					<Button
 						style={{ margin: '4px' }}
-						size="sm"
-						themeType="secondary"
+						type="primary"
+						size="small"
 						onClick={() => append(CHILD_EMPTY_VALUES)}
 					>
 						+

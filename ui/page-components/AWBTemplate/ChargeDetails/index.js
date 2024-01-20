@@ -31,6 +31,7 @@ function ChargeDetails({
 		tempColor = 'transparent';
 	}
 
+	console.log("formData",formData);
 
 	return (
 		<div className={styles.container}>
@@ -46,7 +47,7 @@ function ChargeDetails({
 				/>
 			</div>
 			<div className={styles.block} style={{ '--temp-color': tempColor }} id="footer">
-				<p style={{ fontSize: 13, color: tempColor }}>
+				<p className={styles.data} style={{ fontSize: 13, color: tempColor }}>
 					{FOOTER_MAPPING[formData?.copyType] || 'ORIGINAL 1 (FOR ISSUING CARRIER)'}
 				</p>
 			</div>
