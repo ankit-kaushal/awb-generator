@@ -14,7 +14,7 @@ import SelectDocumentCopies from './SelectDocumentCopies';
 
 const ZERO_COORDINATE = 0;
 const UPDATE_CHECK_INDEX = 1;
-const PDF_HEIGHT_ADJUST_VALUE = 12;
+const PDF_HEIGHT_ADJUST_VALUE = 14;
 const PDF_SCALE = 4.5;
 const TWELEVE_COPIES_LAST_INDEX = 1;
 const INCLUDE_TNC = ['original_3', 'original_2', 'original_1'];
@@ -132,9 +132,7 @@ function GenerateDoc({ formData = {} }) {
 								/>
 							}
 						>
-							<Button className="primary md" disabled={whiteout}>
-								Download 12 Copies with T&C
-							</Button>
+							<Button disabled={whiteout}>Download 12 Copies with T&C</Button>
 						</Popover>
 					</div>
 					<Popover
@@ -150,7 +148,6 @@ function GenerateDoc({ formData = {} }) {
 						}
 					>
 						<Button
-							className="primary md"
 							onClick={() => {
 								handleDownload(false);
 							}}

@@ -87,19 +87,21 @@ function FormContainer({
 
 	return (
 		<div className={styles.container}>
-			<Steps current={current} items={items} />
-			<div>{STEPS[current].content}</div>
-			<div className={styles.button_container}>
-				<div className={styles.button_div}>
-					{current > 0 && <Button onClick={() => prev()}>BACK</Button>}
-					{current < STEPS.length - 1 && (
-						<Button onClick={handleSubmit(() => next())}>Next</Button>
-					)}
-					{STEPS[current].key === 'third' && (
-						<Button onClick={handleSubmit(onSubmit)} type="primary">
-							Generate Airway Bill
-						</Button>
-					)}
+			<Steps size="small" current={current} items={items} />
+			<div className={styles.form_container}>
+				<div>{STEPS[current].content}</div>
+				<div className={styles.button_container}>
+					<div className={styles.button_div}>
+						{current > 0 && <Button onClick={() => prev()}>BACK</Button>}
+						{current < STEPS.length - 1 && (
+							<Button onClick={handleSubmit(() => next())}>Next</Button>
+						)}
+						{STEPS[current].key === 'third' && (
+							<Button onClick={handleSubmit(onSubmit)} type="primary">
+								Generate Airway Bill
+							</Button>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>

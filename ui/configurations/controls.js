@@ -511,7 +511,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'textarea',
 			span: 5,
 			maxLength: 300,
-			placeholder: 'Commodity...',
+			placeholder: 'Commodity',
 			rows: 6,
 			rules: {
 				required: 'Commodity is Required',

@@ -51,6 +51,7 @@ function AwbGenerator() {
 		setValue('paymentTerm', 'prepaid');
 		setValue('class', 'q');
 		setValue('currency', 'INR');
+		setValue('commodity', `${'SAID TO CONTAIN\n'}`);
 		setValue('agentOtherCharges', AGENT_OTHER_CHARGES_CODE);
 	}, []);
 

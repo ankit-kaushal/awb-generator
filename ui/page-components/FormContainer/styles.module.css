@@ -1,11 +1,15 @@
-.container {
+.form_container {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	padding: 60px;
+	padding: 20px 60px;
 	background: #fff;
 	border-radius: 10px;
 	box-shadow: 0 5px 30px 0 hsla(0,0%,9%,.1);
+}
+
+.container :global .ant-steps {
+  padding: 0 40px 20px 0;
 }
 
 .button_container {
