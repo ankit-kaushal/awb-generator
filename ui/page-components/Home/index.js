@@ -16,7 +16,7 @@ function Home() {
 	const router = useRouter();
 	return (
 		<div style={svgStyle} className={styles.home_container}>
-			<span className={styles.title}>WELCOME TO AWB GENERATOR</span>
+			<span className={styles.title}>WELCOME TO DOCREATOR</span>
 			<div className={styles.generate}>
 				<Button
 					type="primary"

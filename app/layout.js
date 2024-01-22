@@ -2,8 +2,8 @@ import './globals.css';
 import PageLayout from '@/ui/components/Layout/PageLayout';
 
 export const metadata = {
-	title: 'AWB Generator',
-	description: 'Generated AWB Document easily',
+	title: 'Docreator',
+	description: 'Generated Documents easily',
 };
 
 export default function RootLayout({ children }) {

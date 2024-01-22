@@ -32,7 +32,7 @@ function PageSider() {
 					style={{ color: 'white', paddingLeft: '20px' }}
 				>
 					<strong>
-						<Link href="/admin">{collapsed ? 'AWB' : 'AWB Generator'}</Link>
+						<Link href="/admin">Docreator</Link>
 					</strong>
 				</Header>
 

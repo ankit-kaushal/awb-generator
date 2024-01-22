@@ -1,22 +1,17 @@
 import { Button, Checkbox } from 'antd';
 import React from 'react';
 
-import CheckboxGroup from '../../../commons/Components/CheckboxGroup';
-
 import multipleCopies from './multipleCopies';
 import styles from './styles.module.css';
 
-function SelectDocumentCopies({
-	copiesValue,
-	copiesOnChange,
-	handleDownload,
-	download24,
-}) {
+const CheckboxGroup = Checkbox.Group;
+
+function SelectDocumentCopies({ copiesValue, copiesOnChange, handleDownload }) {
 	const options = multipleCopies();
 
 	const onChangeTableHeaderCheckbox = (event) => {
 		copiesOnChange(
-			event.currentTarget.checked
+			event.target.checked
 				? [
 						'original_3',
 						'original_2',
@@ -40,12 +35,13 @@ function SelectDocumentCopies({
 
 		return (
 			<Checkbox
-				label="Select All"
 				value="select_all"
 				className={styles.select_checkbox}
 				checked={isAllRowsChecked}
 				onChange={onChangeTableHeaderCheckbox}
-			/>
+			>
+				Select All
+			</Checkbox>
 		);
 	};
 
@@ -59,16 +55,22 @@ function SelectDocumentCopies({
 					value={copiesValue}
 				/>
 			</div>
-			<div>
+			<div className={styles.download_container}>
 				<Button
-					size="sm"
-					themeType="accent"
+					size="small"
 					onClick={() => {
-						handleDownload(download24);
+						handleDownload();
 					}}
-					style={{ marginLeft: 'auto' }}
 				>
 					Download
+				</Button>
+				<Button
+					size="small"
+					onClick={() => {
+						handleDownload(true);
+					}}
+				>
+					Download with T&C
 				</Button>
 			</div>
 		</div>
