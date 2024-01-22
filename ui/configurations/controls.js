@@ -28,7 +28,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			name: 'documentNumber',
 			label: 'Document Number',
 			type: 'text',
-			span: 5,
+			span: 6,
 			placeholder: 'Document Number',
 			rules: {
 				required: 'Document Number is Required',
@@ -36,75 +36,79 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			},
 		},
 	],
-	basic: [
+	shipper: [
 		{
 			name: 'shipperName',
 			type: 'text',
 			label: "Shipper's Name",
 			showOptional: false,
 			placeholder: "Enter Shipper's name",
-			span: 5,
+			span: 12,
 			value: '',
 			rules: {
-				required: 'Shippers Name is Required',
+				required: "Shipper's Name is Required",
 			},
 		},
 		{
 			name: 'shipperAddress',
 			label: "Shipper's Address",
 			type: 'textarea',
-			span: 7,
+			span: 12,
 			maxLength: 200,
 			rows: 6,
-			placeholder: 'Enter Address',
+			placeholder: "Enter Shipper's Address",
 			rules: {
-				required: 'Shippers Address is Required',
+				required: "Shipper's Address is Required",
 			},
 		},
+	],
+	consignee: [
 		{
 			name: 'consigneeName',
 			type: 'text',
 			label: "Consignee's Name",
 			showOptional: false,
 			value: '',
-			span: 5,
+			span: 12,
 			placeholder: "Enter Consignee's name",
 			rules: {
-				required: 'Consignees Name is Required',
+				required: "Consignee's Name is Required",
 			},
 		},
 		{
 			name: 'consigneeAddress',
 			label: "Consignee's Address",
 			type: 'textarea',
-			span: 7,
+			span: 12,
 			maxLength: 200,
 			rows: 6,
-			placeholder: 'Enter Address',
+			placeholder: "Enter Consignee's Address",
 			rules: {
-				required: 'Consignees Address is Required',
+				required: "Consignee's Address is Required",
 			},
 		},
+	],
+	routing: [
 		{
 			name: 'origin',
+			label: 'Origin Airport',
 			type: 'text',
-			label: 'Origin',
 			placeholder: 'Enter Origin Airport',
-			span: 5,
+			span: 6,
 		},
 		{
 			name: 'destination',
+			label: 'Destination Airport',
 			type: 'text',
-			label: 'Destination',
 			placeholder: 'Enter Destination Airport',
-			span: 5,
+			span: 6,
 		},
 		{
 			name: 'originPortCode',
 			type: 'text',
 			label: 'Origin Port Code',
 			placeholder: 'Origin Port Code',
-			span: 5,
+			span: 6,
 			rules: {
 				required: 'Origin Port Code is Required',
 			},
@@ -114,7 +118,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'text',
 			label: 'Destination Port Code',
 			placeholder: 'Destination Port Code',
-			span: 5,
+			span: 6,
 			rules: {
 				required: 'Destination Port Code is Required',
 			},
@@ -124,7 +128,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'text',
 			label: 'By Carrier',
 			placeholder: 'Enter Airline',
-			span: 5,
+			span: 6,
 			rules: {
 				required: 'Carrier is Required',
 			},
@@ -134,23 +138,9 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'text',
 			label: 'Airline IATA Code',
 			placeholder: 'Enter Airline IATA Code',
-			span: 5,
+			span: 6,
 			rules: {
 				required: 'Airline IATA Code is Required',
-			},
-		},
-		{
-			name: 'paymentTerm',
-			type: 'select',
-			label: 'Shipment Type',
-			placeholder: 'Shipment Type',
-			options: [
-				{ value: 'prepaid', label: 'Prepaid' },
-				{ value: 'collect', label: 'Collect' },
-			],
-			span: 5,
-			rules: {
-				required: 'Freight is Required',
 			},
 		},
 		{},
@@ -159,31 +149,31 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'text',
 			label: 'To',
 			placeholder: 'To',
-			span: 2,
+			span: 3,
 		},
 		{
 			name: 'by_one',
 			type: 'text',
 			label: 'By',
 			placeholder: 'By',
-			span: 2,
+			span: 3,
 		},
 		{
 			name: 'to_two',
 			type: 'text',
 			label: 'To',
 			placeholder: 'To',
-			span: 2,
+			span: 3,
 		},
 		{
 			name: 'by_two',
 			type: 'text',
 			label: 'By',
 			placeholder: 'By',
-			span: 2,
+			span: 3,
 		},
 	],
-	package: [
+	rate_description: [
 		{
 			name: 'dimension',
 			label: 'Dimensions (in cm)',
@@ -263,24 +253,17 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			name: 'volumetricWeight',
 			type: 'number',
 			label: 'Volumetric Weight',
-			span: 5,
+			span: 2.4,
 			rules: {
 				required: 'Volumetric Weight is Required',
 			},
 		},
 		{
-			name: 'amountOfInsurance',
-			type: 'text',
-			label: 'Amount of Insurance',
-			span: 5,
-		},
-		{},
-		{
 			name: 'totalPackagesCount',
 			placeholder: 'Package Count',
 			label: 'Package Count',
 			type: 'number',
-			span: 2,
+			span: 2.4,
 			rules: {
 				required: true,
 				validate: (value) => (value <= 0 ? 'Should be greater than 0' : true),
@@ -291,7 +274,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			placeholder: 'Gross Weight',
 			label: 'Gross Weight',
 			type: 'number',
-			span: 2,
+			span: 2.4,
 			rules: {
 				required: 'Gross Weight is Required',
 				validate: (value) => (value < 0 ? 'Cannot be Negative' : true),
@@ -307,7 +290,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 				{ value: 'a', label: 'A' },
 				{ value: 'm', label: 'M' },
 			],
-			span: 2,
+			span: 2.4,
 			rules: {
 				required: 'Class is Required',
 			},
@@ -317,7 +300,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			placeholder: 'Chargeable Weight',
 			label: 'Chargeable Weight',
 			type: 'number',
-			span: 2,
+			span: 2.4,
 			rules: {
 				required: 'Chargable Weight is Required',
 				validate: (value) => (value < 0 ? 'Cannot be Negative' : true),
@@ -328,26 +311,15 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			type: 'number',
 			label: 'Rate per Kg',
 			showOptional: false,
-			span: 5,
+			span: 6,
 			placeholder: 'Rate per Kg',
 			disabled: disableClass,
-		},
-		{
-			name: 'currency',
-			placeholder: 'Select Currency',
-			type: 'select',
-			span: 5,
-			label: 'Currency',
-			options: CURRENCIES,
-			rules: {
-				required: 'Currency is Required',
-			},
 		},
 		{
 			name: 'amount',
 			type: 'text',
 			label: 'Amount',
-			span: 5,
+			span: 6,
 			rules: {
 				required: true,
 			},
@@ -356,11 +328,25 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			name: 'remark',
 			label: 'Remarks',
 			type: 'textarea',
-			span: 7,
+			span: 6,
 			maxLength: 500,
 			placeholder: 'Remarks',
 			rows: 6,
 		},
+		{
+			name: 'commodity',
+			label: 'Commodity Details',
+			type: 'textarea',
+			span: 6,
+			maxLength: 300,
+			placeholder: 'Commodity',
+			rows: 6,
+			rules: {
+				required: 'Commodity is Required',
+			},
+		},
+	],
+	other_charges: [
 		{
 			name: 'agentOtherCharges',
 			label: 'Due Agent Charges',
@@ -378,7 +364,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 				{
 					name: 'code',
 					type: 'text',
-
+					label: 'Charge Code',
 					span: 5,
 					placeholder: 'Enter Code',
 					rules: {
@@ -387,6 +373,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 				},
 				{
 					name: 'price',
+					label: 'Price',
 					placeholder: 'Enter Price',
 					type: 'text',
 					span: 5,
@@ -416,7 +403,6 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 					name: 'code',
 					label: 'Charge Code',
 					type: 'text',
-
 					span: 2.5,
 					placeholder: 'Enter Code',
 					rules: {
@@ -427,7 +413,6 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 					name: 'chargeUnit',
 					label: 'Price/Unit',
 					type: 'text',
-
 					span: 2.5,
 					placeholder: 'Enter Charge Unit',
 				},
@@ -451,36 +436,21 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			],
 		},
 	],
-	handling: [
+	issuing_agent: [
 		{
-			name: 'iataCode',
+			name: 'agentName',
 			type: 'text',
-			label: "Agent's Iata Code",
-			span: 5,
+			label: 'Agent Name',
+			span: 12,
+			placeholder: 'Agent Name',
 			rules: {
-				required: 'Iata Code is Required',
+				required: 'Agent Name is Required',
 			},
-		},
-		{
-			name: 'accountingInformation',
-			type: 'textarea',
-			label: 'Accounting Information',
-			span: 7,
-			rows: 6,
-			rules: {
-				required: 'Accounting Information is Required',
-			},
-		},
-		{
-			name: 'declaredValueForCarriage',
-			type: 'text',
-			label: 'Declared Value for Carriage',
-			span: 5,
 		},
 		{
 			name: 'city',
 			type: 'text',
-			span: 5,
+			span: 12,
 			label: 'Issuing Carrier City',
 			placeholder: 'City',
 			rules: {
@@ -488,50 +458,92 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			},
 		},
 		{
+			name: 'iataCode',
+			type: 'text',
+			label: "Agent's Iata Code",
+			span: 12,
+			rules: {
+				required: 'Iata Code is Required',
+			},
+		},
+	],
+	charges_declaration: [
+		{
+			name: 'currency',
+			placeholder: 'Select Currency',
+			type: 'select',
+			span: 6,
+			label: 'Currency',
+			options: CURRENCIES,
+			rules: {
+				required: 'Currency is Required',
+			},
+		},
+		{
+			name: 'paymentTerm',
+			type: 'select',
+			label: 'Shipment Type',
+			placeholder: 'Shipment Type',
+			options: [
+				{ value: 'prepaid', label: 'Prepaid' },
+				{ value: 'collect', label: 'Collect' },
+			],
+			span: 6,
+			rules: {
+				required: 'Freight is Required',
+			},
+		},
+		{
+			name: 'declaredValueForCarriage',
+			type: 'text',
+			label: 'Declared Value for Carriage',
+			span: 12,
+		},
+		{
 			name: 'valueForCustom',
 			type: 'text',
 			label: 'Declared Value for Customs',
 			showOptional: false,
-			span: 5,
+			span: 12,
 			placeholder: 'Enter Value For Custom',
 		},
+		{
+			name: 'amountOfInsurance',
+			type: 'text',
+			label: 'Amount of Insurance',
+			span: 12,
+		},
+	],
+	accounting_information: [
+		{
+			name: 'accountingInformation',
+			type: 'textarea',
+			label: 'Accounting Information',
+			span: 12,
+			rows: 6,
+			rules: {
+				required: 'Accounting Information is Required',
+			},
+		},
+	],
+	handling_information: [
 		{
 			name: 'handlingInformation',
 			type: 'textarea',
 			label: 'Handling Information',
 			showOptional: false,
-			span: 5,
+			span: 12,
 			rows: 6,
 			placeholder: 'Handling Information',
 			maxLength: 300,
 		},
-		{
-			name: 'commodity',
-			label: 'Commodity Details',
-			type: 'textarea',
-			span: 5,
-			maxLength: 300,
-			placeholder: 'Commodity',
-			rows: 6,
-			rules: {
-				required: 'Commodity is Required',
-			},
-		},
-		{
-			name: 'agentName',
-			type: 'text',
-			label: 'Agent Name',
-			span: 5,
-			placeholder: 'Agent Name',
-			rules: {
-				required: 'Agent Name is Required',
-			},
-		},
+	],
+	cerification: [
 		{
 			name: 'shipperSignature',
 			type: 'text',
 			label: 'Signature of Shipper or his Agent',
-			span: 5,
+			span: 12,
 			placeholder: 'Shipper Signature',
 			rules: { required: 'Shipper Signature is Required' },
 		},
@@ -539,7 +551,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			name: 'place',
 			type: 'text',
 			label: 'At Place',
-			span: 5,
+			span: 6,
 			placeholder: 'Place',
 			rules: {
 				required: 'Place is Required',
@@ -549,7 +561,7 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 			name: 'executedDate',
 			type: 'date_picker',
 			label: 'Executed Date',
-			span: 5,
+			span: 6,
 			placeholder: 'Date',
 			value: new Date(),
 			isPreviousDaysAllowed: true,
@@ -557,13 +569,15 @@ const controls = ({ disableClass = false, unitDefaultValue = '' }) => ({
 				required: 'Date is Required',
 			},
 		},
+	],
+	copy_type: [
 		{
 			name: 'copyType',
 			type: 'select',
 			options: FOOTER_MAPPING,
 			label: 'Copy Type',
-			placeholder: 'Enter Copy Type',
-			span: 5,
+			placeholder: 'Select Copy Type',
+			span: 12,
 		},
 	],
 });

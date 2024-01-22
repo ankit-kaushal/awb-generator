@@ -1,8 +1,5 @@
 import { Layout, Menu, Avatar } from 'antd';
-import {
-	UserOutlined,
-	// eslint-disable-next-line import/no-unresolved
-} from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import navData from './sideNavContent';
@@ -32,7 +29,16 @@ function PageSider() {
 					style={{ color: 'white', paddingLeft: '20px' }}
 				>
 					<strong>
-						<Link href="/admin">Docreator</Link>
+						<Link href="/" style={{ display: 'flex' }}>
+							<img
+								src="hand-docreator.png"
+								alt="Logo"
+								width={36}
+								height={36}
+								style={{ margin: 8 }}
+							/>
+							{!collapsed && 'DOCREATOR'}
+						</Link>
 					</strong>
 				</Header>
 

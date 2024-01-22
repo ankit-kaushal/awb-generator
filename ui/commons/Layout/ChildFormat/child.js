@@ -65,12 +65,14 @@ function Child({
 								className={styles.element}
 								style={{ width: `${flex}%` }}
 							>
-								<div
-									className={`${styles.label} 
+								{controlItem?.label && (
+									<div
+										className={`${styles.label} 
 								${controlItem?.rules?.required ? styles.required_field : ''}`}
-								>
-									{controlItem?.label}
-								</div>
+									>
+										{controlItem?.label}
+									</div>
+								)}
 								<Element
 									{...controlItem}
 									{...EXTRA_PROPS}
@@ -84,7 +86,7 @@ function Child({
 							</div>
 						);
 					})}
-					<div style={{ width: '2em', marginTop: '24px' }}>
+					<div style={{ width: '2em', marginTop: '20px' }}>
 						{showDeleteButton && index >= noDeleteButtonTill && !disabled ? (
 							<DeleteOutlined
 								className={`form-fieldArray-${name}-remove`}

@@ -50,7 +50,6 @@ function FieldArray({
 				{showButtons && !disabled ? (
 					<Button
 						style={{ margin: '4px' }}
-						type="primary"
 						size="small"
 						onClick={() => append(CHILD_EMPTY_VALUES)}
 					>

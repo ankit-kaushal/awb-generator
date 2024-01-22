@@ -3,10 +3,9 @@ import {
 	FolderViewOutlined,
 	CoffeeOutlined,
 	HomeOutlined,
-	// eslint-disable-next-line import/no-unresolved
 } from '@ant-design/icons';
 
-const navRoute = ['/', '/sample', '/admin/datastore'];
+const navRoute = ['/', '/sample'];
 
 const navData = [
 	{

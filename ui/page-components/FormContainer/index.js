@@ -35,8 +35,36 @@ function FormContainer({
 			key: 'first',
 			content: (
 				<div>
-					<Layout fields={fields?.main} errors={errors} control={control} />
-					<Layout fields={fields?.basic} errors={errors} control={control} />
+					<fieldset>
+						<legend>Document Details</legend>
+						<Layout fields={fields?.main} errors={errors} control={control} />
+					</fieldset>
+					<div className={styles.flex_column}>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Shipper Details</legend>
+							<Layout
+								fields={fields?.shipper}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Consignee Details</legend>
+							<Layout
+								fields={fields?.consignee}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+					</div>
+					<fieldset>
+						<legend>Routing and Flight Details</legend>
+						<Layout
+							fields={fields?.routing}
+							errors={errors}
+							control={control}
+						/>
+					</fieldset>
 				</div>
 			),
 		},
@@ -45,18 +73,33 @@ function FormContainer({
 			key: 'second',
 			content: (
 				<>
-					<Layout fields={fields?.package} errors={errors} control={control} />
-					<div className={styles.calcuate_button}>
-						<Button
-							size="small"
-							type="primary"
-							onClick={() => {
-								calculateCharges();
-							}}
-						>
-							Calculate
-						</Button>
-					</div>
+					<fieldset>
+						<legend>Rate Description</legend>
+						<Layout
+							fields={fields?.rate_description}
+							errors={errors}
+							control={control}
+						/>
+					</fieldset>
+					<fieldset>
+						<legend>Other Charges</legend>
+						<Layout
+							fields={fields?.other_charges}
+							errors={errors}
+							control={control}
+						/>
+						<div className={styles.calcuate_button}>
+							<Button
+								size="small"
+								type="primary"
+								onClick={() => {
+									calculateCharges();
+								}}
+							>
+								Calculate
+							</Button>
+						</div>
+					</fieldset>
 				</>
 			),
 		},
@@ -64,7 +107,60 @@ function FormContainer({
 			title: 'Handling Details',
 			key: 'third',
 			content: (
-				<Layout fields={fields?.handling} errors={errors} control={control} />
+				<>
+					<div className={styles.flex_column}>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Issuing carrier&apos;s agent Details</legend>
+							<Layout
+								fields={fields?.issuing_agent}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Charges Declaration</legend>
+							<Layout
+								fields={fields?.charges_declaration}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+					</div>
+					<div className={styles.flex_column}>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Accounting Information</legend>
+							<Layout
+								fields={fields?.accounting_information}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+						<fieldset style={{ width: '50%' }}>
+							<legend>Handling Information</legend>
+							<Layout
+								fields={fields?.handling_information}
+								errors={errors}
+								control={control}
+							/>
+						</fieldset>
+					</div>
+					<fieldset>
+						<legend>Shipper&apos;s & Carrier&apos;s Certification</legend>
+						<Layout
+							fields={fields?.cerification}
+							errors={errors}
+							control={control}
+						/>
+					</fieldset>
+					<fieldset>
+						<legend>Copy Type</legend>
+						<Layout
+							fields={fields?.copy_type}
+							errors={errors}
+							control={control}
+						/>
+					</fieldset>
+				</>
 			),
 		},
 	];

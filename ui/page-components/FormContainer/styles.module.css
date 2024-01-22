@@ -8,8 +8,22 @@
 	box-shadow: 0 5px 30px 0 hsla(0,0%,9%,.1);
 }
 
+.container fieldset {
+  border: 1px solid #b0afaf;
+  border-radius: 10px;
+  margin: 8px;
+}
+
+.container legend {
+  font-weight: 500;
+}
+
 .container :global .ant-steps {
   padding: 0 40px 20px 0;
+}
+
+.flex_column {
+  display: flex;
 }
 
 .button_container {
@@ -41,4 +55,5 @@
 .calcuate_button :global .ant-btn {
 	position: relative;
 	bottom: 36px;
+  font-size: 12px;
 }

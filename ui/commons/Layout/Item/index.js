@@ -6,7 +6,7 @@ import getErrorMessage from '../getErrorMessage';
 import styles from './styles.module.css';
 
 function Item(props) {
-	const { type, control, span, label, error, heading, rules } = props || {};
+	const { type, control, span, label, error, rules } = props || {};
 
 	const errorOriginal = getErrorMessage({
 		error,
@@ -27,22 +27,13 @@ function Item(props) {
 			className={styles.element}
 			style={{ width: `${flex}%`, padding: '4px' }}
 		>
-			<div
-				className="heading"
-				style={{
-					height: '16px',
-					marginBottom: '6px',
-					fontWeight: '600',
-					fontSize: '13px',
-				}}
-			>
-				{heading}
-			</div>
-			<div
-				className={`${styles.label} ${rules?.required ? styles.required_field : ''}`}
-			>
-				{label}
-			</div>
+			{label && (
+				<div
+					className={`${styles.label} ${rules?.required ? styles.required_field : ''}`}
+				>
+					{label}
+				</div>
+			)}
 			<Element {...props} control={control} />
 			<p
 				style={{
